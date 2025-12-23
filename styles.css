@@ -1,7 +1,7 @@
 .title {
 
     text-align: center;
-    color:rgb(120, 192, 240);
+    color:rgb(96, 176, 230);
     font-weight: lighter
 
 
@@ -13,6 +13,7 @@
    height: 50px; 
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    border-radius: 2px;
+  
    
 }
 :hover.mybutton {
@@ -43,13 +44,27 @@
 
 .task {
     margin: 10px;
+    font-size: 18px;
 }
 
 .buttons{
     margin-left: 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
 }
 
 .titlespan{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.totaltasks {
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.statusmessage {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;
 }

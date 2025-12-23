@@ -3,6 +3,7 @@ const myTaskManager = new TaskManager();
 const loadButton = document.getElementById('loadTasksBtn');
 const tasksList = document.getElementById('taskList');
 const statusMessage = document.getElementById('statusMessage');
+statusMessage.classList.add('statusmessage');
 
 function renderTasks() {
     tasksList.innerHTML = '';
@@ -58,6 +59,7 @@ function renderTasks() {
 
     });
     const totalTasks = document.createElement('span');
+    totalTasks.classList.add('totaltasks');
     
     if (myTaskManager.tasks.length > 0 ) {
         totalTasks.textContent = "Total Tasks: " + myTaskManager.tasks.length; 
@@ -66,6 +68,7 @@ function renderTasks() {
     else {
         totalTasks.textContent = "";
         tasksList.appendChild(totalTasks);
+       
     }
     
 }
@@ -102,3 +105,6 @@ loadButton.addEventListener('click', async() => {
 
 
 )
+window.TaskManager = myTaskManager;
+window.TaskClass = Task;
+window.refreshScreen = renderTasks;
