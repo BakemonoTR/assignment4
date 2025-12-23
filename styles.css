@@ -6,3 +6,18 @@
 
 
 }
+
+.mybutton{
+
+   width: 100px; 
+   height: 50px; 
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   border-radius: 2px;
+   
+}
+:hover.mybutton {
+    width: 103px;
+    height: 53px;
+    background-color: beige;
+
+}
