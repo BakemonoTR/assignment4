@@ -1,12 +1,12 @@
 class Task{
 
     constructor(id,title,completed) {
-        Object.defineProperty(this.id,{
+        Object.defineProperty(this,id,{
             value: id,
             writeable: false,
         })
-        title = this.title;
-        completed = false;
+        this.title = title;
+        this.completed = completed;
     }
 
 

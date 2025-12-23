@@ -1,4 +1,4 @@
-fetchTasks() {
+function fetchTasks() {
     return new Promise((resolve)  => {
         console.log("Connecting...");
 

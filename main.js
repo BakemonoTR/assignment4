@@ -7,7 +7,7 @@ const statusMessage = document.getElementById('statusMessage');
 function renderTasks() {
     tasksList.innerHTML = '';
 
-    myTaskManager.tasks.array.forEach(task => {
+    myTaskManager.tasks.forEach(task => {
         const taskDiv = document.createElement('div');
         taskDiv.className = 'task';
 
@@ -19,10 +19,10 @@ function renderTasks() {
         const TitleSpan =document.createElement('span');
         TitleSpan.textContent = task.title;
 
-        const.ToggleButton = document.createElement('button');
+        const ToggleButton = document.createElement('button');
         ToggleButton.textContent = 'Toggle';
 
-        const.DeleteButton = document.createElement('button');
+        const DeleteButton = document.createElement('button');
         DeleteButton.textContent = 'Delete';
 
         ToggleButton.addEventListener('click', () => {
@@ -52,9 +52,30 @@ loadButton.addEventListener('click', async() => {
 
     try {
 
-        
+       const rawData = await fetchTasks();
+       
+       const jsonString = JSON.stringify(rawData);
+       const parsedData = JSON.parse(jsonString);
+       
+       const taskObjects = parsedData.map(item => {
+            return new Task(item.id,item.title,item.completed);
+       });
+
+       myTaskManager.setTasks(taskObjects);
+
+       renderTasks();
+
+       statusMessage.textContent = '';
+
+
+    }
+    catch(error) {
+        console.error(error);
+        statusMessage.textContent = "Error loading tasks!";
+
+    }
     }
 
 
 
-})
+)
