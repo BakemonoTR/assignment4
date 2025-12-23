@@ -1,10 +1,10 @@
 class Task{
 
     constructor(id,title,completed) {
-        Object.defineProperty(this,id,{
+        Object.defineProperty(this,'id',{
             value: id,
-            writeable: false,
-        })
+            writeable: false
+        });
         this.title = title;
         this.completed = completed;
     }
@@ -19,7 +19,7 @@ class Task{
 class TaskManager{
 
     constructor(tasks) {
-        tasks = this.tasks;
+        this.tasks = [];
 
     }
 
@@ -36,7 +36,7 @@ class TaskManager{
     }
 
     removeTask(taskID) {
-        const newList = this.tasks.filter(task => task.id != taskID);
+        const newList = this.tasks.filter(task => task.id !== taskID);
         
         this.tasks = newList;
     }

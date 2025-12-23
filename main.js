@@ -6,6 +6,7 @@ const statusMessage = document.getElementById('statusMessage');
 
 function renderTasks() {
     tasksList.innerHTML = '';
+    tasksList.classList.add('taskslist');
 
     myTaskManager.tasks.forEach(task => {
         const taskDiv = document.createElement('div');
@@ -14,16 +15,23 @@ function renderTasks() {
         if(task.completed) {
 
             taskDiv.classList.add('completed');
+
+        }
+        else {
+            taskDiv.classList.add('uncompleted');
         }
 
         const TitleSpan =document.createElement('span');
         TitleSpan.textContent = task.title;
+        TitleSpan.classList.add('titlespan');
 
         const ToggleButton = document.createElement('button');
         ToggleButton.textContent = 'Toggle';
+        ToggleButton.classList.add('buttons')
 
         const DeleteButton = document.createElement('button');
         DeleteButton.textContent = 'Delete';
+        DeleteButton.classList.add('buttons')
 
         ToggleButton.addEventListener('click', () => {
             myTaskManager.toggleTask(task.id);
@@ -37,14 +45,29 @@ function renderTasks() {
             
         })
 
+        
+
+
         taskDiv.appendChild(TitleSpan);
         taskDiv.appendChild(ToggleButton);
         taskDiv.appendChild(DeleteButton);
 
         tasksList.appendChild(taskDiv);
+        
 
 
     });
+    const totalTasks = document.createElement('span');
+    
+    if (myTaskManager.tasks.length > 0 ) {
+        totalTasks.textContent = "Total Tasks: " + myTaskManager.tasks.length; 
+        tasksList.appendChild(totalTasks);
+    }
+    else {
+        totalTasks.textContent = "";
+        tasksList.appendChild(totalTasks);
+    }
+    
 }
 
 loadButton.addEventListener('click', async() => {

@@ -1,7 +1,7 @@
 .title {
 
     text-align: center;
-    color: aqua;
+    color:rgb(120, 192, 240);
     font-weight: lighter
 
 
@@ -20,4 +20,36 @@
     height: 53px;
     background-color: beige;
 
+}
+
+.completed span {
+    text-decoration: line-through;
+    color:deepskyblue;
+    
+}
+
+.uncompleted span {
+    color:goldenrod;
+    font-weight: bold;
+}
+
+.taskslist {
+    margin-top: 50px;
+    text-align: center;
+    
+    border: 2px solid #ccc;
+    
+}
+
+.task {
+    margin: 10px;
+}
+
+.buttons{
+    margin-left: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.titlespan{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
