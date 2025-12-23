@@ -20,6 +20,8 @@ A dynamic, web-based Task Management Dashboard built with **Vanilla JavaScript**
 * **Asynchronous Programming:** `async/await` and `Promises`.
 * **Immutability:** Avoids direct array mutation by using the Spread Operator (`...`).
 
+
+
 ## 📂 Project Structure
 
 ```text
@@ -28,6 +30,8 @@ A dynamic, web-based Task Management Dashboard built with **Vanilla JavaScript**
 ├── main.js                   # Application logic (DOM interaction & Event Listeners)
 ├── api.js                # Mock API simulation (fetchTasks)
 ├── taskManager.js        # Logic for Task and TaskManager classes
+
+
 
 ## 💡 Challenges & Key Learnings
 
