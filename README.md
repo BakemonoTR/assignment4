@@ -20,19 +20,6 @@ A dynamic, web-based Task Management Dashboard built with **Vanilla JavaScript**
 * **Asynchronous Programming:** `async/await` and `Promises`.
 * **Immutability:** Avoids direct array mutation by using the Spread Operator (`...`).
 
-
-
-## 📂 Project Structure
-
-```text
-├── index.html                # Main HTML structure
-├── styles.css                # Styling for the dashboard
-├── main.js                   # Application logic (DOM interaction & Event Listeners)
-├── api.js                # Mock API simulation (fetchTasks)
-├── taskManager.js        # Logic for Task and TaskManager classes
-
-
-
 ## 💡 Challenges & Key Learnings
 
 During the development of this dashboard, several technical challenges were addressed:
@@ -41,3 +28,12 @@ During the development of this dashboard, several technical challenges were addr
 * **Asynchronous Synchronization:** Managing the 1.5-second simulated server delay using `Promises` and ensuring the UI renders only after the data is fully resolved using `async/await`.
 * **Dynamic DOM Management:** Keeping the visual DOM elements strictly in sync with the internal JavaScript state. Solved by implementing a central `renderTasks()` method that refreshes the UI upon any state change.
 * **Strict Mode & Syntax:** Debugging `ReferenceError` and `TypeError` issues related to file paths and object property definitions (e.g., `Object.defineProperty`).
+
+## 📂 Project Structure
+
+```text
+├── index.html                # Main HTML structure
+├── styles.css                # Styling for the dashboard
+├── main.js                   # Application logic (DOM interaction & Event Listeners)
+├── api.js                    # Mock API simulation (fetchTasks)
+└── taskManager.js            # Logic for Task and TaskManager classes
